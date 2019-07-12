@@ -21,5 +21,10 @@ spring:
 
 
 mybatis:
+  #mapping路径
   mapper-locations: classpath:mapping/*Mapper.xml
-  type-aliases-package: com.linjingc.h2demo.entity
+  #配置映射类所在的包名
+  type-aliases-package: com.linjingc.configdemo.entity
+  # 配置自动转换驼峰标识
+  configuration:
+    map-underscore-to-camel-case: true

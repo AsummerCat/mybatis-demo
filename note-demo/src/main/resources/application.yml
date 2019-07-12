@@ -22,3 +22,6 @@ spring:
 # 指定POJO扫描包来让mybatis自动扫描到自定义POJO
 mybatis:
   type-aliases-package: com.linjingc.notedemo.entity
+  # 配置自动转换驼峰标识
+  configuration:
+    map-underscore-to-camel-case: true

@@ -1,7 +1,7 @@
-package com.linjingc.notedemo.controller;
+package com.linjingc.configdemo.controller;
 
-import com.linjingc.notedemo.entity.BasicUser;
-import com.linjingc.notedemo.service.UserService;
+import com.linjingc.configdemo.entity.BasicUser;
+import com.linjingc.configdemo.service.UserService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
