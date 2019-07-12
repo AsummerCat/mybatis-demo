@@ -1,0 +1,27 @@
+server:
+  port: 8500
+
+spring:
+  datasource:
+    hikari:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:~/test
+    platform: h2
+    #初始化脚本
+    schema: classpath:db/schema.sql
+      #在浏览器中开启控制台
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2
+
+
+
+# 指定POJO扫描包来让mybatis自动扫描到自定义POJO
+mybatis:
+  type-aliases-package: com.linjingc.notedemo.entity
+  # 配置自动转换驼峰标识
+  configuration:
+    map-underscore-to-camel-case: true
