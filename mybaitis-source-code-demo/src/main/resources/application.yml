@@ -1,0 +1,23 @@
+server:
+  port: 8099
+spring:
+  application:
+    name: mybaitis-source-code-demo
+  datasource:
+    hikari:
+      username: root
+      password: 123456
+    url: jdbc:mysql://127.0.0.1:3339/mybaitis-test?Unicode=true&characterEncoding=UTF-8&useSSL=false
+    password: root
+    username: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+# 指定POJO扫描包来让mybatis自动扫描到自定义POJO
+mybatis:
+  type-aliases-package: com.linjingc.mybaitissourcecodedemo.entity
+  # 配置自动转换驼峰标识
+  configuration:
+    map-underscore-to-camel-case: true
+    # 日志输出控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
