@@ -11,18 +11,23 @@ import javax.annotation.Resource;
  */
 @Service
 public class UserService {
-    @Resource
-    private UserMapper userMapper;
+	@Resource
+	private UserMapper userMapper;
 
-    public BasicUser findUser(String name) {
-        return userMapper.findUser(name);
-    }
+	public BasicUser findUser(String name) {
+		return userMapper.findUser(name);
+	}
 
-    public void saveUser() {
-        for (int i = 0; i < 100; i++) {
-            userMapper.insert("小明" + i, "123456", i);
-        }
-    }
+	public void saveUser() {
+		for (int i = 0; i < 100; i++) {
+			userMapper.insert("小明" + i, "123456", i);
+		}
+	}
+
+	public void deleteAll() {
+		userMapper.deleteAll();
+		;
+	}
 
 
 }

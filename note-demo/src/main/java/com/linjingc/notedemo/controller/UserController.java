@@ -27,4 +27,14 @@ public class UserController {
         return "保存成功";
     }
 
+
+    @RequestMapping("/deleteAll")
+    @ResponseBody
+    public String deleteAll() {
+        userService.deleteAll();
+        return "删除成功";
+    }
+
+
+
 }
