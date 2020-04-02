@@ -17,7 +17,10 @@ public class UserController {
 
     @RequestMapping("/{name}")
     public BasicUser findUser(@PathVariable String name) {
-        return userService.findUser(name);
+        BasicUser user = userService.findUser(name);
+
+        return user;
+
     }
 
     @RequestMapping("/save")
