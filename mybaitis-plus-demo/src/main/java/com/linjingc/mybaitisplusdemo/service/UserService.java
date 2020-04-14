@@ -1,5 +1,6 @@
 package com.linjingc.mybaitisplusdemo.service;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.linjingc.mybaitisplusdemo.dao.UserMapper;
 import com.linjingc.mybaitisplusdemo.entity.BasicUser;
@@ -23,6 +24,7 @@ public class UserService {
     public void saveUser() {
         for (int i = 0; i < 100; i++) {
             userMapper.insert("小明" + i, "123456", i);
+            userMapper.update(new BasicUser(), Wrappers.<BasicUser>lambdaQuery().eq(BasicUser::getName,"老王") );
         }
     }
 

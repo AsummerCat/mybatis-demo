@@ -12,18 +12,20 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-	@Resource
-	private UserService userService;
+//	@Resource
+//	private UserService userService;
 
 	@RequestMapping("/{name}")
 	public BasicUser findUser(@PathVariable String name) {
-		return userService.findUser(name);
+//		return userService.findUser(name);
+		return new BasicUser()
+				;
 	}
 
 	@RequestMapping("/save")
 	@ResponseBody
 	public String save() {
-		userService.saveUser();
+//		userService.saveUser();
 		return "保存成功";
 	}
 
