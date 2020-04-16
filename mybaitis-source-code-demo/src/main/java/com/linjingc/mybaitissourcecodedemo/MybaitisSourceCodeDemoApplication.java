@@ -9,11 +9,12 @@ import java.util.Arrays;
 
 @MapperScan("com.linjingc.mybaitissourcecodedemo.dao")
 @SpringBootApplication
+
 public class MybaitisSourceCodeDemoApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext run = SpringApplication.run(MybaitisSourceCodeDemoApplication.class, args);
-		Arrays.stream(run.getBeanDefinitionNames()).forEach(System.out::println);
+		//Arrays.stream(run.getBeanDefinitionNames()).forEach(System.out::println);
 //		String resource = "mybatis-config.xml";
 //		InputStream inputStream = null;
 //		try {
@@ -26,7 +27,8 @@ public class MybaitisSourceCodeDemoApplication {
 //		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 //		mapper.findUser("小明");
 //	List list = sqlSession.selectList("com.foo.bean.BlogMapper.queryAllBlogInfo");
-
+		Object basicUser = run.getBean("basicUser");
+		System.out.println(basicUser.toString());
 	}
 
 }

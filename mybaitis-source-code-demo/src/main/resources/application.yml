@@ -2,9 +2,9 @@ server:
   port: 8100
 
 
-logging:
-  level:
-    root: debug
+#logging:
+#  level:
+#    root: debug
 
 spring:
   datasource:
